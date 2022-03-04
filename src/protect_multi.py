@@ -116,7 +116,7 @@ def rsa_check_keys_decrypt( priv_key_file: str, pub_key_file_list: str)->bool:
 	"""
 
 	if len( args.public ) != 2 :
-		log.failure("Only two public keys are needed")
+		log.failure("Exactly two public keys are needed")
 		sys.exit(1)
 
 	priv_key = RSA.importKey(open(priv_key_file).read())
